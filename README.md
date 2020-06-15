@@ -8,35 +8,24 @@ You can also follow [@Cobo Vault](https://twitter.com/CoboVault) on Twitter.
 ## Contents
 
 - [Introduction](#introduction)
-- [Clone](#clone)
-- [Build](#build)
-- [Test](#test)
-- [Code Structure](#code-structure)
-- [Core Dependencies](#core-dependencies)
 - [Issues and PRs](#issues-and-prs)
 - [License](#license)
 
 
 ## Introduction
-Cobo Vault runs as a standalone application on customized hardware and Android 8.1 Oreo (Go Edition). 
+Cobo Vault runs as a standalone application on customized hardware and Android 8.1 Oreo (Go Edition).
+This repo contains the Android system code. From the code you can clearly see how we did the following to customize the Android system and minimize the attack surface:
+- Closing adb and remove adb daemon
+- Removing system processes/apps
+- Preventing installation of third-party apps
+- Patching Linux Kernel vulnerabilities
 
-## Clone
+Also we took full advantage of security features inherent in Android like Full-Disk Encryption, TEE, Verified Boot, and SELinux.
+Due to copyright, some vendors’ code cannot be made public, and we have removed some of the code from the source code.
+Therefore this open source code cannot be compiled. However, we can share this part of code under an NDA if you want to fully verify the code and reproduce it. Please send an email to cobovault@cobo.com.
+Since the size of a single repo on github cannot exceed 5G, we put the code on AWS. You can access the code through this link:
+[cobo-vault-system](https://cobo-vault-system)
 
-    git clone git@github.com:CoboVault/cobo-vault-system.git
-
-## Build
-
-
-## Code Structure
-Modules
-
-`app`: Main application module
-
-`coinlib`: Module for supported blockchains, currently included in 12 blockchains
-
-`encryption-core`: Module for the Secure Element, includes commands, protocol, serialize/deserialize, serial port communication
-
-## Core Dependencies
 
 ## Issues and PRs
 Please submit any issues [here](https://github.com/CoboVault/cobo-vault-system/issues). PRs are also welcome!
