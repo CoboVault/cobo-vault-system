@@ -24,7 +24,7 @@ Also we took full advantage of security features inherent in Android like Full-D
 Due to copyright, some vendors’ code cannot be made public, and we have removed some of the code from the source code.
 Therefore this open source code cannot be compiled. However, we can share this part of code under an NDA if you want to fully verify the code and reproduce it. Please send an email to cobovault@cobo.com.
 Since the size of a single repo on github cannot exceed 5G, we put the code on AWS. You can access the code through this link:
-[cobo-vault-system](https://cobo-vault-system)
+[cobo-vault-system](https://cobo-vault.s3.amazonaws.com/cobo_vault_system.tar.gz)
 
 
 ## Issues and PRs
